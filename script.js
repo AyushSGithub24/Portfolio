@@ -529,7 +529,7 @@ boot.onclick = welcome;
     cz = 0,
     boost = 0;
   window.warp = () => {
-    boost += 2.5;
+    boost += 0.2;
   };
   addEventListener("mousemove", (e) => {
     mx = e.clientX / innerWidth - 0.5;
@@ -543,10 +543,10 @@ boot.onclick = welcome;
   addEventListener("resize", size);
   size();
   (function frame() {
-    t += still ? 0 : 0.016;
+    t += still ? 0 : 0.008;
     if (!still) {
-      cz += 0.012 + boost * 0.05;
-      boost *= 0.94;
+      cz += 0.003 + boost * 0.01;
+      boost *= 0.97;
     }
     let q = 0;
     for (let i = 0; i < N; i++)
@@ -562,11 +562,11 @@ boot.onclick = welcome;
     geo.attributes.position.needsUpdate = true;
     const wide = innerWidth > 800;
     k.position.set(wide ? 5 : 0, wide ? 1.6 : 3.4, -cz - 4);
-    k.rotation.x += 0.004 + my * 0.01 + boost * 0.01;
-    k.rotation.y += 0.006 + mx * 0.02 + boost * 0.02;
+    k.rotation.x += 0.0005 + my * 0.002 + boost * 0.001;
+    k.rotation.y += 0.0007 + mx * 0.003 + boost * 0.001;
     sh.forEach((s) => {
-      s.rotation.x += 0.004 * s.userData.s;
-      s.rotation.y += 0.006 * s.userData.s;
+      s.rotation.x += 0.0005 * s.userData.s;
+      s.rotation.y += 0.0007 * s.userData.s;
       if (s.position.z > -cz + 6) {
         s.position.z -= 84;
         s.position.x = (Math.random() - 0.5) * 26;
