@@ -1,114 +1,63 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Porfolio</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./style.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Ayush Gupta | Software Engineer (Java, Spring Boot, React.js, Microservices)</title>
+  <meta name="description"
+    content="Interactive terminal portfolio of Ayush Gupta, a full-stack developer and Software Engineering Intern at GlobalLogic building Java, Spring Boot, React.js, and microservices applications. Type a command to explore projects, skills and contact info.">
+  <meta name="theme-color" content="#0c1118">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Ayush Gupta | Full-Stack Developer">
+  <meta property="og:description"
+    content="Explore my projects from a terminal inside a 3D world. Try: about, projects, skills, contact.">
+  <meta name="twitter:card" content="summary_large_image">
+  <script
+    type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Ayush Gupta","jobTitle":"Full-Stack Developer","knowsAbout":["Java","Spring Boot","React.js","Microservices","REST APIs","Generative AI"],"sameAs":["https://github.com/AyushSGithub24","https://www.linkedin.com/in/ayush-gupta-23b3611a6/"]}</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link
+    href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&family=Fraunces:wght@500;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
-    <div class="main">
-        <div class="left">
-            <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8cG90cmFpdHxlbnwwfHwwfHx8MA%3D%3D" alt="">
-        </div>
-        <div class="right">
-            <img src="./assets/burger-menu.png" alt="" class="burger-menu">
-        <div class="heading">
-            <h1 style="font-weight: 550; font-size: 60px;">Ayush Gupta</h1>
-            <br>
-            <h3 style="font-weight: 400;">Photographer and Web Designer</h3>
-            <br>
-                <button class="but"><img src="./assets/download.png" >Download Resume</button>
-        
+  <div id="boot" role="status" aria-label="Loading"></div>
+  <canvas id="world" aria-hidden="true"></canvas>
+  <div class="scan"></div>
 
-        </div>
-        <div>
-            <h2 style="color: #878787; font-weight: 500; padding: 10px;">My Porfolio</h2>
-            <hr style="border-bottom: rgb(168, 168, 168) solid 1.5px ; margin: 10px;">
-        </div>
-        <br>
-        <div class="box">
-            <div class="child">
-                <img src="https://images.unsplash.com/photo-1720736005617-db0603b42149?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwzOHx8fGVufDB8fHx8fA%3D%3D">
-                <img src="https://images.unsplash.com/photo-1720937172267-575f3575386b?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHw2fHx8ZW58MHx8fHx8">
-                <img src="https://images.unsplash.com/photo-1720727612331-1c432da0ebb1?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwyM3x8fGVufDB8fHx8fA%3D%3D">
-                <img src="https://images.unsplash.com/photo-1720521181253-17620a1f1a35?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwyNnx8fGVufDB8fHx8fA%3D%3D">
-            </div>
-            <div class="child">
-                <img src="https://images.unsplash.com/photo-1718506921878-781af1aadaf2?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHw5fHx8ZW58MHx8fHx8">
-                <img src="https://images.unsplash.com/photo-1720463813678-14114ffff9fd?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwxN3x8fGVufDB8fHx8fA%3D%3D">
-                <img src="https://images.unsplash.com/photo-1720854802555-768aa847f011?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwzM3x8fGVufDB8fHx8fA%3D%3D">
-                <img src="https://images.unsplash.com/photo-1720736005617-db0603b42149?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwzOHx8fGVufDB8fHx8fA%3D%3D">
-              
-            </div>
-            
-        </div>
-       <div>
-        <div>
-            <h2 style="color: #878787; font-weight: 500; padding: 10px;">About</h2>
-            <hr style="border-bottom: rgb(168, 168, 168) solid 1.5px ; margin: 10px;">
-        
-        </div>
-        <br>
-        <p>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Obcaecati, reprehenderit provident! Esse delectus officia cupiditate non autem laborum mollitia molestiae vitae maxime earum aliquam quasi a sed explicabo enim saepe veritatis rem, praesentium facere quisquam id aliquid dolor. Veniam, repellendus odit nihil vero cupiditate recusandae sint saepe rem dolore sed id dignissimos earum esse ipsa dolores velit nam rerum adipisci tempore, neque ipsam delectus ullam nemo. Cumque blanditiis rem dolorem maxime, odio inventore sed quo facilis in iste labore, eveniet, quae fugiat distinctio. Impedit incidunt saepe esse hic, dolorem iusto unde fugiat minus suscipit alias temporibus accusamus numquam ea maxime.
-        </p>
-        </div>
-        
-        <h2 style="color: #878787; font-weight: 500; padding: 10px;">My Skill</h2>
-        <hr style="border-bottom: rgb(168, 168, 168) solid 1.5px ; margin: 10px;">
-        <div class="our-skills">
-            <div class="skill">
-                <p>Photography</p>
-                <div class="progressBar">
-                    <div class="progress" style="width: 95%; color: white;">
-                        95%
-                    </div>
-                </div>
-                <!-- <br> -->
-                <p>Web Design</p>
-                <div class="progressBar">
-                    <div class="progress" style="width: 85%; color: white;">
-                        85%
-                    </div>
-                </div>
-                <!-- <br> -->
-                <p>Photoshop</p>
-                <div class="progressBar">
-                    <div class="progress" style="width: 80%; color: white;">
-                        80%
-                    </div>
-                </div>
-            </div>
-        </div>
-        <br>
-        <footer>
-            <div class="content">
-                <h1>14+</h1>
-                <h3>Parteners</h3>
-            </div>
-            <div class="content">
-                <h1>55+</h1>
-                <h3>Projects Done</h3>
-            </div>
-            <div class="content">
-                <h1>89+</h1>
-                <h3>Happy Clients</h3>
-            </div>
-            <div class="content">
-                <h1>150+</h1>
-                <h3>Meetings</h3>
-            </div>
-        </footer>
-
-
-
-
-
-        </div>
+  <div class="stage">
+    <header>
+      <div>
+        <h1>Hi, I'm <span id="name">Ayush Gupta</span></h1>
+        <p>Full-stack developer · Java, Spring Boot, React.js. Type a command to explore.</p>
+      </div>
+      <button id="tg" aria-label="Toggle light and dark theme">theme</button>
+    </header>
+    <div class="win" id="win">
+      <div class="tb"><i></i><i></i><i></i><em>portfolio.sh</em></div>
+      <div id="screen" role="log" aria-live="polite" aria-label="Terminal output"></div>
+      <div class="row"><span class="p">$</span><input id="cmd" aria-label="Type a command" autocomplete="off"
+          autocapitalize="off" spellcheck="false" placeholder="type help and press Enter"></div>
     </div>
-</body>
+    <div class="chips" id="chips" aria-label="Quick commands"></div>
+  </div>
+
+  <div class="sr" id="seo">
+    <h2>About Ayush Gupta</h2>
+    <p>Full-stack developer and Software Engineering Intern at GlobalLogic with experience building end-to-end Java,
+      Spring Boot, React.js, and microservices applications, secure REST APIs, and Generative AI automation pipelines.</p>
+    <h2>Projects</h2>
+    <ul id="seolist"></ul>
+    <h2>Contact</h2>
+    <p>Email: <a href="mailto:guptaayush2005@gmail.com">guptaayush2005@gmail.com</a> · Phone: +91 9999066149</p>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="script.js" defer></script>
+  </body>
+
 </html>
+
+
